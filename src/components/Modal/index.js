@@ -45,9 +45,8 @@ export default function Modal({ setOpenModal }) {
             return
         }
         try {
-            const response = await api.post("/enviar", forms);
+            await api.post("/enviar", forms);
             setOpenModal(false)
-            // console.log(response.data);
         } catch (error) {
             return
         }
@@ -56,17 +55,17 @@ export default function Modal({ setOpenModal }) {
         <Fade in={true}>
             <div className='bg-contact' >
                 <div className='card-contact'>
-                    <img id='clear' src={Clear} onClick={() => handlerClear()}></img>
-                    <img id='close' src={Close} onClick={() => handleOpen()}></img>
+                    <img id='clear' src={Clear} alt='clear button' onClick={() => handlerClear()}></img>
+                    <img id='close' src={Close} alt='close button' onClick={() => handleOpen()}></img>
                     <h1>
                         Está buscando um desenvolvedor em ascensão para a sua empresa ou projeto?
                         <span> I am here!</span>
                         <div className='nav-contact'>
                             <Link href='https://www.linkedin.com/in/guilhermedora/' target="_blank">
-                                <img id='linkedin' src={Linkedin}></img>
+                                <img alt='linkedin button' id='linkedin' src={Linkedin}></img>
                             </Link>
                             <Link href='https://github.com/guilhermedora' target="_blank">
-                                <img id='github' src={Git}></img>
+                                <img alt='github button' id='github' src={Git}></img>
                             </Link>
                         </div>
                         De qualquer forma, se você tem uma outra requisição, pergunta,

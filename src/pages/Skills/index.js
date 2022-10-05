@@ -24,7 +24,7 @@ export default function Skills() {
     const navigate = useNavigate()
 
     async function handleMessage(stack) {
-        if (stack == pj) {
+        if (stack === pj) {
             return setControl(false)
         } else {
             setControl(true)
