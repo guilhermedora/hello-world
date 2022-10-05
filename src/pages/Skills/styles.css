@@ -1,0 +1,63 @@
+.container-skills {
+    background-color: #f9f9f9 !important;
+    height: 100% !important;
+    min-width: 100% !important;
+}
+
+.btn-skills {
+    bottom: 1;
+    left: 70px;
+    z-index: 1;
+}
+
+.css-1bjk3jo-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected {
+    font-family: 'Red Hat Display', sans-serif !important;
+    font-weight: 700 !important;
+    color: #1c1c1cbc !important;
+    background-color: #00ff80c6;
+    border-radius: 20px;
+    transition-delay: 0.5s !important;
+}
+
+.header-skills {
+    margin-bottom: 10px !important;
+    background-color: #ffffffd6 !important;
+}
+
+.MuiPaper-root {
+    min-width: 100%;
+}
+
+.box-list {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+
+    margin: auto !important;
+
+    gap: 10px !important;
+
+    min-height: 100% !important;
+    min-width: 850px !important;
+    max-width: 100% !important;
+}
+
+.item-box {
+    display: flex !important;
+    background-color: #ffffff !important;
+    border-radius: 20px !important;
+    width: 400px !important;
+    height: 100px !important;
+}
+
+.profile {
+    border-radius: 0 !important;
+}
+
+.btn-return {
+    position: fixed !important;
+
+    top: 80%;
+    right: 3%;
+}
