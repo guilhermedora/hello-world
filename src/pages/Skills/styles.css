@@ -10,11 +10,11 @@
     z-index: 1;
 }
 
-.css-1bjk3jo-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected {
+.MuiBottomNavigationAction-root.Mui-selected {
     font-family: 'Red Hat Display', sans-serif !important;
     font-weight: 700 !important;
     color: #1c1c1cbc !important;
-    background-color: #00ff80c6;
+    background-color: #00ff80c6 !important;
     border-radius: 20px;
     transition-delay: 0.5s !important;
 }
