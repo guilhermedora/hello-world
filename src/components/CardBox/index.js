@@ -11,7 +11,7 @@ function CardBox() {
     return (
         <div className='container-cardBox'>
             {pj.map((info) => (
-                <Card sx={{ minWidth: 400, backGround: 'unset' }} key={info.title}>
+                <Card className='card' key={info.title}>
                     <CardMedia
                         className='image-card'
                         component={info.component}
@@ -27,7 +27,7 @@ function CardBox() {
                             {info.resume}
                         </Typography>
                     </CardContent>
-                    <CardActions sx={{ justifyContent: 'flex-end', alignItems: 'center' }}>
+                    <CardActions className='btn-slot'>
                         <Button
                             className='btn-git' href={info.git} target="_blank"
                         >

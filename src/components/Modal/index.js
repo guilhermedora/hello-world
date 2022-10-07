@@ -34,6 +34,11 @@ export default function Modal({ setOpenModal }) {
         })
     }
 
+    const handlerCancel = async (e) => {
+        handlerClear()
+        handleOpen()
+    }
+
     const handlerSubmit = async (e) => {
         e.preventDefault();
         if (
@@ -69,8 +74,22 @@ export default function Modal({ setOpenModal }) {
                             </Link>
                         </div>
                         De qualquer forma, se você tem uma outra requisição, pergunta,
-                        sugestão ou feedback não exite em mandar uma mensagem. <span> =)</span>
+                        sugestão ou feedback não exite em mandar uma mensagem.
                     </h1>
+                    <h2>
+                        Está buscando um desenvolvedor em ascensão para a sua empresa ou projeto?
+                        <br></br><span> I am here! </span><br></br>
+                        Não exite em mandar uma mensagem ou feedback<br></br>
+                        <span> =)</span>
+                        <div className='nav-contact'>
+                            <Link href='https://www.linkedin.com/in/guilhermedora/' target="_blank">
+                                <img alt='linkedin button' id='linkedin' src={Linkedin}></img>
+                            </Link>
+                            <Link href='https://github.com/guilhermedora' target="_blank">
+                                <img alt='github button' id='github' src={Git}></img>
+                            </Link>
+                        </div>
+                    </h2>
                     <Box
                         component="form"
                         sx={{
@@ -103,14 +122,18 @@ export default function Modal({ setOpenModal }) {
                             name='mensagem'
                             color="success"
                             id="outlined-multiline-flexible"
-                            rows={7} label="Mensagem"
+                            rows={6} label="Mensagem"
                             multiline variant="outlined"
                             value={forms.mensagem}
                             onChange={(e) => handlerInputChange(e)}
                         />
+                        <div className='box-btn-contact'>
+                            <button id='enviar-mob' onClick={(e) => handlerSubmit(e)}>Enviar</button>
+                            <button id='clear-mob' onClick={() => handlerCancel()}>Cancelar</button>
+                        </div>
                     </Box>
                 </div>
-                <button onClick={(e) => handlerSubmit(e)}>Enviar</button>
+                <button id='enviar' onClick={(e) => handlerSubmit(e)}>Enviar</button>
             </div>
         </Fade >
     );

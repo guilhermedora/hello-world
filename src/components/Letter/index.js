@@ -1,3 +1,4 @@
+import './styles.css'
 import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
 import { useState } from 'react';
@@ -19,15 +20,9 @@ export default function Letter({ old, novo, rota, setOpenModal }) {
     }
 
     return (
-        <Box sx={{
-            '& > :not(style)':
-            {
-                fontSize: 50,
-                minHeight: 50,
-                textAlign: 'center',
-                fontFamily: `'Red Hat Display'`,
-            }
-        }}>
+        <Box
+            className='box-letter'
+        >
             <Box id='box-old'>
                 {checked
                     ? <h1 onMouseEnter={handleChange} style={{ color: "#1C1C1C" }}>{old}</h1>

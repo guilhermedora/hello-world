@@ -1,0 +1,15 @@
+.box-letter h1 {
+    font-size: 13rem;
+    min-height: 5rem;
+    text-align: center;
+    font-family: "Red Hat Display";
+}
+
+@media (max-width:800px) {
+    .box-letter h1 {
+        font-size: 6rem;
+        /* min-height: 5rem;
+        text-align: center;
+        font-family: "Red Hat Display"; */
+    }
+}

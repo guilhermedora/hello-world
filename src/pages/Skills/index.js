@@ -35,10 +35,18 @@ export default function Skills() {
 
     return (
         <div className='container-skills'>
-            <Box sx={{
-                pb: 7, display: 'flex', flexDirection: 'column',
-                justifyContent: 'space-between'
-            }} ref={ref}>
+            <Button
+                onClick={() => { navigate('/') }}
+                className='logo btn-return'
+                variant="contained"
+            >
+                G
+            </Button>
+            <Box
+                className='box-skills'
+                sx={{
+                    pb: 7
+                }} ref={ref}>
                 <Paper
                     className='header-skills'
                     elevation={3}>
@@ -62,7 +70,7 @@ export default function Skills() {
                             ?
                             msg.map(({ title, resume, link }, index) => (
                                 <ListItem className='item-box' button key={index + link}>
-                                    <ListItemAvatar>
+                                    <ListItemAvatar className='stack-icon'>
                                         <Avatar className='stack' alt="Stack Picture" src={link} />
                                     </ListItemAvatar>
                                     <ListItemText primary={title} secondary={resume} />
@@ -74,13 +82,6 @@ export default function Skills() {
                     </List>
                 </Fade>
             </Box>
-            <Button
-                onClick={() => { navigate('/') }}
-                className='logo btn-return'
-                variant="contained"
-            >
-                G
-            </Button>
         </div>
     )
 }

@@ -14,16 +14,19 @@ export default function About() {
             <div className='container-about'>
                 <Box
                     className='aside'
-                    sx={{
-                        '& > :not(style)': {
-                            display: 'flex',
-                            alignItems: 'center',
-                            flexDirection: 'column',
-                            justifyContent: 'space-around'
-                        },
-                    }}
+                // sx={{
+                //     '& > :not(style)': {
+                //         display: 'flex',
+                //         alignItems: 'center',
+                //         flexDirection: 'column',
+                //         justifyContent: 'space-around'
+                //     },
+                // }}
                 >
-                    <Paper elevation={5}>
+                    <Paper
+                        className='aside-nav'
+                        // sx={{ display: 'flex' }}
+                        elevation={5}>
                         <Button
                             onClick={() => { navigate('/') }}
                             className='logo'
@@ -34,8 +37,8 @@ export default function About() {
                         <div className='box-txt'>
                             <h1>INTRO</h1><br />
                             <p>
-                                Pernambucano, Brasileiro.<br></br>
-                                Moro em Recife, tenho 29 anos.<br></br>
+                                Pernambucano, Brasileiro.
+                                Moro em Recife, tenho 29 anos.
                                 Gosto de ambientes calmos e
                                 música agitada.
                             </p>
@@ -60,10 +63,10 @@ export default function About() {
                 </Box>
                 <div className='about-text'>
                     <p>
-                        Olá, meu nome é Guilherme mas pode me chamar de
+                        Olá, meu nome é Guilherme, mas pode me chamar de
                         Gui, sou formado em engenharia mecatrônica e estou em
                         transição de carreira para Dev Frontend. Após me sentir
-                        deslocado no seguimento que havia adotado decidi seguir o
+                        deslocado no seguimento que havia adotado, decidi seguir o
                         coração e me tornar de fato um Dev! A escolha veio de
                         maneira natural, sempre adorei interagir com diferentes
                         linguagens e utilizar a lógica de programação na minha trajetória.
@@ -72,10 +75,10 @@ export default function About() {
                         pelo trabalho que quero fazer. Habilidades podem ser
                         ensinadas, personalidade é inerente. Prefiro continuar
                         aprendendo, continuar me desafiando e fazer coisas
-                        interessantes que importam.
+                        interessantes, com significado que importam.
                         <br></br><br></br>
-                        Sou um espírito leve, expressivo e multitalentoso, com uma
-                        capacidade natural de se manter tranquilo independente da
+                        Sou leve, expressivo e multitalentoso, com uma
+                        capacidade natural de me manter tranquilo independente da
                         situação. Tenho paixão por fluxos de trabalho organizado e
                         resolução de problemas complexos e acredito que deixar o ego
                         de lado para criar uma experiência que atenda às necessidades
@@ -84,7 +87,23 @@ export default function About() {
                         Cya!
                     </p>
                 </div>
+                <div className='social-footer-nav'>
+                    <Link href='https://www.instagram.com/guilhermedora' target="_blank">
+                        <Button
+                            className='insta'
+                            variant="contained"
+                        >
+                        </Button>
+                    </Link>
+                    <Link href='https://twitter.com/GuilhermDora' target="_blank">
+                        <Button
+                            className='twitter'
+                            variant="contained"
+                        >
+                        </Button>
+                    </Link>
+                </div>
             </div>
-        </Fade>
+        </Fade >
     )
 }

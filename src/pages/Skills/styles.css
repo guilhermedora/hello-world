@@ -1,13 +1,19 @@
 .container-skills {
     background-color: #f9f9f9 !important;
-    height: 100% !important;
-    min-width: 100% !important;
+    min-height: 100vh !important;
+    width: 100% !important;
 }
 
 .btn-skills {
     bottom: 1;
     left: 70px;
     z-index: 1;
+}
+
+.box-skills {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
 }
 
 .MuiBottomNavigationAction-root.Mui-selected {
@@ -22,6 +28,14 @@
 .header-skills {
     margin-bottom: 10px !important;
     background-color: #ffffffd6 !important;
+
+}
+
+.box-skills ul {
+    min-height: 100% !important;
+    padding-top: 3rem;
+    gap: 2rem !important;
+    width: 90%;
 }
 
 .MuiPaper-root {
@@ -39,7 +53,6 @@
     gap: 10px !important;
 
     min-height: 100% !important;
-    min-width: 850px !important;
     max-width: 100% !important;
 }
 
@@ -57,7 +70,43 @@
 
 .btn-return {
     position: fixed !important;
-
-    top: 80%;
+    bottom: 5%;
     right: 3%;
+}
+
+@media (max-width:1150px) {
+    .box-list {
+        width: 400px !important;
+    }
+}
+
+@media (max-width:670px) {
+    .logo {
+        width: 1rem !important;
+        height: 6rem !important;
+        font-size: 6rem !important;
+        z-index: 4;
+    }
+
+    .stack-icon {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .item-box {
+        flex-direction: column !important;
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        border-radius: 20px !important;
+        width: 200px !important;
+        height: 170px !important;
+    }
+}
+
+@media (max-width:590px) {
+    .box-list {
+        width: 200px !important;
+    }
 }

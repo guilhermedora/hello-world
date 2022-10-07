@@ -136,6 +136,16 @@ const pj = [
         resume: "O sistema trata-se de uma aplicação para controles de finanças pessoais",
         git: "https://github.com/guilhermedora/Portfolio/tree/main/FRONT/Dindin-react-jsx",
         deploy: "https://github.com/guilhermedora"
+    },
+    {
+        component: "img",
+        height: "200",
+        image: 'dindin.svg',
+        alt: "Dindin Front image",
+        title: "DinDin1",
+        resume: "O sistema trata-se de uma aplicação para controles de finanças pessoais",
+        git: "https://github.com/guilhermedora/Portfolio/tree/main/FRONT/Dindin-react-jsx",
+        deploy: "https://github.com/guilhermedora"
     }
 ]
 

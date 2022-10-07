@@ -1,7 +1,6 @@
 .container-about {
-    box-sizing: border-box;
     display: flex;
-    min-height: 100%;
+    min-height: 100vh;
     background-color: #efeff2;
 }
 
@@ -10,6 +9,7 @@
     width: 240px;
     background: #f9f9f9 !important;
     min-height: 100%;
+
 }
 
 .MuiCardContent-root {
@@ -17,11 +17,6 @@
     background-color: #fefefe;
     border-end-end-radius: 20px;
     border-end-start-radius: 20px;
-}
-
-.aside {
-    height: 100vh !important;
-    position: fixed;
 }
 
 .logo {
@@ -37,11 +32,11 @@
 
 .about-text {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 100vh;
-    width: 120rem;
-    padding-left: 22rem;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100%;
+    padding: 10rem 5rem 5rem 5rem;
+    text-align: justify;
     margin: auto;
 }
 
@@ -49,14 +44,16 @@
     font-family: 'Red Hat Display', sans-serif;
     font-size: x-large;
     color: rgba(0, 0, 0, 0.8);
-    max-width: 1000px;
-    min-width: 300px;
+    max-width: 120rem;
 }
 
 .box-txt {
-    margin-top: 7rem;
     width: 20rem;
     padding: 20px;
+}
+
+.aside {
+    height: 100vh !important;
 }
 
 .aside h1 {
@@ -74,6 +71,13 @@
     color: rgb(132, 130, 130);
     font-size: medium;
     min-width: 1rem;
+}
+
+.aside-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .insta {
@@ -97,7 +101,6 @@
 .social {
     display: flex;
     gap: 2vh;
-    margin-top: 20vh;
     flex-wrap: wrap;
 }
 
@@ -107,4 +110,83 @@
 
 .twitter:hover {
     box-shadow: 5px 5px 2px 2px #00ff80 !important;
+}
+
+.social-footer-nav {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    width: 100%;
+    padding-bottom: 4rem;
+}
+
+@media (max-width:1400px) {
+    .container-about {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .aside {
+        height: 10rem !important;
+    }
+
+    .aside-nav {
+        padding: 2rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .box-txt {
+        margin: 0;
+        width: 51rem;
+        text-align: justify;
+    }
+
+    .box-txt h1 {
+        text-align: center;
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width:820px) {
+    .social {
+        display: none;
+    }
+
+    .social-footer-nav {
+        display: flex;
+    }
+
+    .box-txt {
+        width: 40rem;
+    }
+
+    .box-txt h1 {
+        text-align: right;
+    }
+
+    .about-text {
+        margin-top: 2rem;
+        padding: 7rem 2rem 2rem 2rem;
+    }
+}
+
+@media (max-width:520px) {
+    .box-txt {
+        display: none;
+    }
+
+    .about-text {
+        margin-top: 0;
+        padding-top: 2rem;
+    }
+
 }

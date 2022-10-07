@@ -1,11 +1,16 @@
 .container-cardBox {
     display: flex;
-    gap: 15px;
+    gap: 3rem;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 
     width: 100%;
+}
+
+.card {
+    min-width: 40rem !important;
+    background: unset !important;
 }
 
 .resume {
@@ -52,7 +57,13 @@
     top: -10px;
 }
 
-.resume::-webkit-scrollbar {
+.btn-slot {
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* .resume::-webkit-scrollbar {
     width: 10px;
 }
 
@@ -68,4 +79,29 @@
 
 .resume::-webkit-scrollbar-thumb:hover {
     background: #d4d4d4d2;
+} */
+
+@media (max-width:670px) {
+    .card {
+        min-width: 30rem !important;
+    }
+
+    .btn-deploy:hover,
+    .btn-git:hover {
+        box-shadow: 0px 0px 0px 0px crimson !important;
+    }
+
+    .image-card:hover {
+        transform: none;
+        -ms-transform: none;
+        -webkit-transform: none;
+        height: 200px;
+        width: 260px;
+        top: 0px;
+    }
+
+    .btn-slot {
+        justify-content: center;
+        gap: 2rem;
+    }
 }

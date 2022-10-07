@@ -1,15 +1,19 @@
 .bg-contact {
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
 
     position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: auto;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center !important;
+    justify-content: center !important;
     flex-direction: column;
 
-    gap: 20px;
+    /* gap: 20px; */
 
     background-color: #efeff2;
 }
@@ -56,7 +60,6 @@
     background-color: #00ff80c6;
     width: 150px;
     border-radius: 10px;
-    /* text-shadow: 1px -0.8px #fff; */
 }
 
 .card-contact {
@@ -67,7 +70,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    justify-content: center;
     position: relative;
 
     background-color: #fff;
@@ -134,4 +137,100 @@
     border: none !important;
     background-color: #fff;
     padding: 0px 8px !important;
+}
+
+#close-mob,
+.box-btn-contact {
+    display: none;
+}
+
+.card-contact h2 {
+    display: none;
+    font-family: 'Red Hat Display', sans-serif;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width:550px) {
+    html {
+        background-color: #efeff2;
+    }
+
+    .card-contact {
+        min-height: 100% !important;
+        min-width: auto !important;
+        box-shadow: 0 0 0 0 !important;
+        padding: 5rem 0 0 0 !important;
+        background-color: #efeff2;
+
+    }
+
+    #close-mob {
+        display: block;
+        position: absolute;
+        top: 3rem;
+        right: -4rem;
+        width: 3rem;
+    }
+
+    #clear,
+    #close,
+    #enviar {
+        display: none !important;
+    }
+
+    .box-btn-contact {
+        display: flex;
+        /* flex-direction: column; */
+        align-self: center;
+        justify-content: center !important;
+        /* width: rem; */
+        gap: 2rem;
+        margin-top: 12rem !important;
+        height: 5rem !important;
+    }
+
+    #clear-mob,
+    #enviar-mob {
+        box-shadow: 3px -3px 2px 2px #00ff80 !important;
+        border-radius: 2rem;
+        background-color: #efeff2;
+        padding: 0 1rem 0 1rem;
+        width: 15rem;
+    }
+
+    #clear-mob:hover,
+    #enviar-mob:hover {
+        transform: scale(1);
+    }
+
+    .MuiFormLabel-root {
+        background-color: #efeff2 !important;
+    }
+
+    .card-contact h1 {
+        display: none;
+    }
+
+    .card-contact h2 {
+        display: inline;
+        text-align: center;
+        width: 30rem;
+    }
+
+    .card-contact form {
+        display: flex;
+        width: 40rem;
+        flex-direction: column;
+    }
+
+    .nav-contact img {
+        opacity: 1;
+    }
+
+    #github:hover,
+    #linkedin:hover {
+        box-shadow: 0px 0px 0px 0px !important;
+        opacity: 1;
+        transform: scale(1) !important;
+    }
 }

@@ -28,3 +28,10 @@
     min-height: 100%;
     /* position: absolute; */
 }
+
+/* 
+@media (max-width:550px) {
+    .container-letter {
+        display: none;
+    }
+} */
